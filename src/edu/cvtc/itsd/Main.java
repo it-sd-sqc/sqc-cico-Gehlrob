@@ -37,11 +37,21 @@ public class Main {
   private static class InputFilter extends DocumentFilter {
     private static final int MAX_LENGTH = 8;
 
+    private boolean isNumeric(String str) {
+      return str != null && str.matches("\\d");
+    }
+
     @Override
     public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (stringToAdd == null) {
+        return;
+      }
+      Document doc = fb.getDocument();
+      int currentLength = doc.getLength();
+
+      if (isNumeric(stringToAdd) && (currentLength + stringToAdd.length() <= MAX_LENGTH)) {
         super.insertString(fb, offset, stringToAdd, attr);
       }
       else {
@@ -53,7 +63,15 @@ public class Main {
     public void replace(FilterBypass fb, int offset, int lengthToDelete, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (stringToAdd == null) {
+        return;
+      }
+      Document doc = fb.getDocument();
+      int currentLength = doc.getLength();
+
+      int newLength = currentLength - lengthToDelete + stringToAdd.length();
+
+      if (isNumeric(stringToAdd) && newLength <= MAX_LENGTH) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
       }
       else {
