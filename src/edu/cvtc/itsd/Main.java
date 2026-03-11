@@ -242,13 +242,16 @@ public class Main {
     panelMain.setMinimumSize(new Dimension(320, 240));
     panelMain.setPreferredSize(new Dimension(640, 480));
     panelMain.setMaximumSize(new Dimension(640, 480));
-    panelMain.setBackground(Color.black);
-
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    panelMain.setBackground(new Color(235,230,245));
+    // End
     panelMain.add(Box.createVerticalGlue());
     JLabel labelDirective = new JLabel("Scan card", JLabel.LEADING);
     labelDirective.setFont(fontMain);
     labelDirective.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelDirective.setForeground(Color.cyan);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    labelDirective.setForeground(Color.darkGray);
+    // End
     panelMain.add(labelDirective);
 
     fieldNumber = new JTextField();
@@ -257,14 +260,18 @@ public class Main {
     fieldNumber.setPreferredSize(new Dimension(200, 32));
     fieldNumber.setMaximumSize(new Dimension(200, 32));
     fieldNumber.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    fieldNumber.setBackground(Color.green);
-    fieldNumber.setForeground(Color.magenta);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    fieldNumber.setBackground(Color.white);
+    fieldNumber.setForeground(Color.black);
+    // End
     panelMain.add(fieldNumber);
 
     JButton updateButton = new JButton("Update");
     updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     updateButton.addActionListener(new Update());
-    updateButton.setForeground(Color.green);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    updateButton.setForeground(Color.black);
+    // End
     panelMain.add(updateButton);
 
     panelMain.add(Box.createVerticalGlue());
@@ -275,7 +282,9 @@ public class Main {
     panelStatus.setMinimumSize(new Dimension(320, 240));
     panelStatus.setPreferredSize(new Dimension(640, 480));
     panelStatus.setMaximumSize(new Dimension(640, 480));
-    panelStatus.setBackground(Color.blue);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    panelStatus.setBackground(new Color(230,230,230));
+    // End
     
     JButton doneButton = new JButton("Done");
     doneButton.addActionListener(handler);
@@ -286,13 +295,17 @@ public class Main {
     labelUser = new JLabel("Registrant", JLabel.LEADING);
     labelUser.setFont(fontMain);
     labelUser.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelUser.setForeground(Color.yellow);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    labelUser.setForeground(Color.darkGray);
+    // End
     panelStatus.add(labelUser);
 
     labelState = new JLabel("updated", JLabel.LEADING);
     labelState.setFont(fontMain);
     labelState.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelState.setForeground(Color.magenta);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    labelState.setForeground(Color.black);
+    // End
     panelStatus.add(labelState);
 
     panelStatus.add(Box.createVerticalGlue());
@@ -303,19 +316,25 @@ public class Main {
     panelError.setMinimumSize(new Dimension(320, 240));
     panelError.setPreferredSize(new Dimension(640, 480));
     panelError.setMaximumSize(new Dimension(640, 480));
-    panelError.setBackground(Color.red);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    panelError.setBackground(new Color(220,220,220));
+    // End
 
     panelError.add(Box.createVerticalGlue());
     labelReason = new JLabel("", JLabel.LEADING);
     labelReason.setFont(fontMain);
     labelReason.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelReason.setForeground(Color.yellow);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    labelReason.setForeground(Color.black);
+    // End
     panelError.add(labelReason);
 
     buttonAcknowledge = new JButton("OK");
     buttonAcknowledge.addActionListener(handler);
     buttonAcknowledge.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    buttonAcknowledge.setForeground(Color.red);
+    //Module 6-8. CiCo: Create a functional pull request Assigment
+    buttonAcknowledge.setForeground(Color.black);
+    // End
     panelError.add(buttonAcknowledge);
     panelError.add(Box.createVerticalGlue());
 
